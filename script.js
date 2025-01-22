@@ -27,3 +27,35 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         formResponse.style.color = 'red'; 
     });
 });
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides img');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+// Function to show a specific slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+// Function to change slide
+function changeSlide(direction) {
+    slideIndex = (slideIndex + direction + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
+
+// Auto-play functionality
+function autoPlay() {
+    changeSlide(1); // Go to the next slide
+    setTimeout(autoPlay, 3000); // Change every 3 seconds
+}
+
+// Event listeners for buttons
+prevButton.addEventListener('click', () => changeSlide(-1));
+nextButton.addEventListener('click', () => changeSlide(1));
+
+// Initialize the slideshow
+showSlide(slideIndex);
+autoPlay();

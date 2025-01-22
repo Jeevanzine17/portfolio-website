@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jivan Zine | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script> <!-- Defer ensures the script loads after HTML -->
 </head>
 <body>
     <!-- Navbar -->
@@ -34,8 +34,10 @@
     <section id="home">
         <div class="home-content">
             <h1>Welcome to Jivan Zine's Portfolio</h1>
-            <p>Web Developer | Programmer | Designer</p>
-            
+            <p>Web Developer | Programmer | Designer</p>  
+        </div>
+        <div class="profile-pic-container">
+        <img src="profilepic.jpeg" class="profile-pic">
         </div>
     </section>
 
@@ -75,44 +77,128 @@
                 <div class="skill-bar" style="width: 70%;">70%</div>
             </div>
             <div class="skill">
-                <h3>C</h3>
-                <div class="skill-bar" style="width: 75%;">75%</div>
+                <h3>C Language</h3>
+                <div class="skill-bar" style="width: 75%;">60%</div>
             </div>
         </div>
     </section>
+   
+    <!-- Education Section -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-item">
+            <h3>Master's in Computer Applications (MCA)</h3>
+            <p>
+                <a href="http://www.dypimca.ac.in/" target="_blank" class="college-link">
+                Dr. D. Y. Patil Institute of Master of Computer Application, Akurdi, Pune (2023 - Present) 
+            </a>
+            </p>
+        </div>
+        <div class="education-item">
+            <h3>Bachelor's in Computer Science</h3>
+            <p>
+                <a href="https://mgvpcmcs.kbhgroup.in" target="_blank" class="college-link">
+                Completed from Panchavati College of Management and Computer Science, Nashik (2020 - 2023)</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Section -->
+<section id="certification">
+    <h2>Certifications</h2>
+    <div class="certification-container">
+        <div class="certification-item">
+            <h3>Web Development Certification</h3>
+            <p>Issued by Udemy - <a href="https://drive.google.com/file/d/1PpIRUANPBCU6iGWeNDw9BURzqb1YmVpN/view?usp=drive_link" target="_blank">View Certificate</a></p>
+        </div>
+
+        <div class="certification-item">
+            <h3>Python for Data Science</h3>
+            <p>Issued by Infosys - <a href="https://drive.google.com/file/d/1jEsENJ-tqh1ZTMcXTk5rq0PfzF_Imnoy/view?usp=drive_link" target="_blank">View Certificate</a></p>
+        </div>
+
+        <div class="certification-item">
+            <h3>Angular</h3>
+            <p>Issued by Infosys - <a href="https://drive.google.com/file/d/1aCd9I20hyXW5tsQKoXXuJY3j3_BVTMAK/view?usp=drive_link" target="_blank">View Certificate</a></p>
+        </div>
+
+        <div class="certification-item">
+            <h3>Python for Machine Learning and  Data Science</h3>
+            <p>Issued by Great Learning - <a href="https://drive.google.com/file/d/1U2fgrjVFbjmGKYv3Ysg_d3nVzNENIhLg/view?usp=drive_link" target="_blank">View Certificate</a></p>
+        </div>
+
+        <div class="certification-item">
+            <h3>GitHub</h3>
+            <p>Issued by PrepInsta - <a href="https://drive.google.com/file/d/1RYHo7mKmKrBUDk1zSHAI-d754jCQI7el/view?usp=drive_link" target="_blank">View Certificate</a></p>
+        </div>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>My Projects</h2>
         <div class="projects-container">
+            <!-- Project 1 -->
             <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-                <h3>Gym Management System</h3>
-                <p>Description of project 1...</p>
-            </div>
-            <div class="project">
-                <img src="" alt="Project 1">
-                <h3>Online Food Delivery Page</h3>
-                <p>Description of project 2...</p>
+                <div class="project-content">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>Farmer Rental System</h3>
+                        <p>
+                            The Farmer Equipment Rental System is a comprehensive platform designed to streamline
+                             the process of renting agricultural equipment. The system addresses the challenges 
+                             faced by farmers and equipment owners in accessing and managing agricultural machinery. 
+                             By providing an efficient, user-friendly interface, the system facilitates the easy 
+                             rental of various agricultural tools and machinery, promoting the optimal use of 
+                             resources and reducing the financial burden on farmers who cannot afford to purchase 
+                             expensive equipment.
+                        </p>
+                         <!-- Download Button -->
+                        <a href="PDFs/aerms.zip" download class="btn download-btn">Download Project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form" action="send_msg.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div id="form-response" class="hidden"></div>
+        <div class="contact-container">
+            <!-- Gmail -->
+            <div class="contact-item">
+                <a href="mailto:jeevanz2052@gmail.com" target="_blank">
+                    <img src="images/gmail.png" alt="Gmail Logo" class="contact-icon">
+                </a>
+            </div>
+        
+            <!-- LinkedIn -->
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/jivan-zine-321aa918b/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn Logo" class="contact-icon">
+                </a>
+            </div>
+            <!-- GitHub -->
+            <div class="contact-item">
+                <a href="https://github.com/Jeevanzine17" target="_blank">
+                    <img src="images/github.png" alt="GitHub Logo" class="contact-icon">
+                </a>
+            </div>
+            <!-- Instagram -->
+            <div class="contact-item">
+                <a href="https://www.instagram.com/jeevanzine_17/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram Logo" class="contact-icon">
+                </a>
+            </div>
+        </div>
     </section>
-
+    
+    
     <footer>
         <p>© 2024 Jivan Zine. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

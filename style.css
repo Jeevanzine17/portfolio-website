@@ -7,8 +7,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: black;
-    
-  
 }
 
 header {
@@ -49,9 +47,8 @@ header {
     text-decoration: none;
     font-size: 18px;
 }
-.nav-links li a:hover
-{
-color: blue;
+.nav-links li a:hover {
+    color: blue;
 }
 .burger {
     display: none;
@@ -71,15 +68,33 @@ section {
     padding: 100px 20px;
     text-align: center;
 }
+.project {
+    padding: 100px 20px;
+    text-align: center;
+}
 
 #home {
-    background-image: url('images/back.jpg');
+    background-image: url('images/sky.jpeg');
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px; 
+    background-image: url('images/profilepic.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 150px; 
+    right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 2;
 }
 
 #about, #skills, #projects, #contact {
@@ -105,19 +120,157 @@ section {
     text-align: center;
 }
 
+/* Education and Certification Sections */
+#education, #certification {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#education h2, #certification h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.education-container, .certification-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item, .certification-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3, .certification-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.education-item p, .certification-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.college-link {
+    text-decoration: none;
+    color: #007bff; 
+    font-weight: bold;
+    position: relative;
+}
+
+.college-link:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+
+.college-link:hover::after {
+    content: "Click to visit the college website";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin-top: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.college-link:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certification-item a:hover {
+    text-decoration: underline;
+}
+
 .projects-container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    padding: 20px;
 }
 
 .project {
-    width: 300px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
     background-color: #f4f4f4;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+}
+
+.project-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.project-image {
+    width: 300px;
+    height: 300px; /* Square image */
+    background-image: url('images/home.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 form {
@@ -141,6 +294,33 @@ input, textarea {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    display: inline-block;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2); 
 }
 
 footer {
@@ -195,5 +375,16 @@ footer {
 
     .skills-container {
         flex-direction: column;
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
     }
 }
